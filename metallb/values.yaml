@@ -89,7 +89,7 @@ commonAnnotations: {}
 controller:
   image:
     registry: docker.io
-    repository: k0s/metallb-controller
+    repository: k7scn/metallb-controller
     tag: 0.9.5-debian-10-r65
     ## Specify a imagePullPolicy
     ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
@@ -275,7 +275,7 @@ controller:
 speaker:
   image:
     registry: docker.io
-    repository: k0s/metallb-speaker
+    repository: k7scn/metallb-speaker
     tag: 0.9.5-debian-10-r75
     ## Specify a imagePullPolicy
     ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'

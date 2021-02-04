@@ -2,7 +2,7 @@
 
 image:
   repository: registry.cn-beijing.aliyuncs.com/k7scn/flagger
-  tag: 1.5.0
+  tag: 1.6.2
   pullPolicy: IfNotPresent
   pullSecret:
 
@@ -17,7 +17,7 @@ podAnnotations:
 # priority class name for pod priority configuration
 podPriorityClassName: ""
 
-metricsServer: "http://prometheus:9090"
+metricsServer: "http://prometheus-k8s.monitoring.svc:9090"
 
 # accepted values are kubernetes, istio, linkerd, appmesh, contour, nginx, gloo, skipper, traefik
 meshProvider: "nginx"
@@ -104,7 +104,7 @@ rbac:
 
 crd:
   # crd.create: `true` if custom resource definitions should be created
-  create: false
+  create: true
 
 nameOverride: ""
 fullnameOverride: ""
@@ -124,7 +124,7 @@ tolerations: []
 prometheus:
   # to be used with ingress controllers
   install: false
-  image: registry.cn-beijing.aliyuncs.com/k7scn/prometheus:v2.23.0
+  image: docker.io/prom/prometheus:v2.23.0
   retention: 2h
 
 kubeconfigQPS: ""
