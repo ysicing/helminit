@@ -6,7 +6,7 @@ helm upgrade -i redis -n gaea-system bitnami/redis \
     --set image.repository=k7scn/redis \
     --set cluster.enabled=false \
     --set password=rootPassword \
-    --set service.type=NodePort \
+    --set master.service.type=NodePort \
     --set metrics.enabled=true \
     --set metrics.image.repository=k7scn/redis-exporter \
     --set metrics.serviceMonitor.enabled=true \
